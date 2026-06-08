@@ -3,11 +3,11 @@ local base = "https://raw.githubusercontent.com/AppaYip/computer-craft/main/"
 local files = {
     "rednet/enums_actions.lua",
     "rednet/enums_protocols.lua",
-    "rednet/registery/handler.lua",
-    "rednet/registery/register.lua",
-    "rednet/registery/server.lua",
-    "rednet/registery/storage.lua",
-    "rednet/helpers/uninstall.lua",
+    "rednet/registry/handler.lua",
+    "rednet/registry/register.lua",
+    "rednet/registry/server.lua",
+    "rednet/registry/storage.lua",
+    "rednet/registry/uninstall.lua",
 
     "helpers/peripheral.lua",
 }
