@@ -5,7 +5,7 @@ local function loadDefault()
 end
 
 
-function getAll()
+local function getAll()
     if not fs.exists(fileName) then
         return loadDefault()
     end
@@ -34,14 +34,14 @@ local function findByName(name, data)
 end
 
 
-function save(data)
+local function save(data)
     local file = fs.open(fileName, "w")
     file.write(textutils.serializeJSON(data))
     file.close()
 end
 
 
-function add(gatePacket)
+local function add(gatePacket)
     local data = getAll()
 
     if findByName(gatePacket.name, data) then
