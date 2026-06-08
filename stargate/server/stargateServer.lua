@@ -32,7 +32,17 @@ while true do
     print("Recieved packet from: " .. id)
     print("Packet: " .. textutils.serialise(packet))
 
-    local response = PacketHandler.handle(packet, gate)
+    local ok, response = pcall(
+        PacketHandler.handle,
+        packet,
+        gate
+    )
+    if not ok then
+        response = {
+            success = false,
+            error = "Internal Server Error: " .. tostring(response)
+        }
+    end
 
     rednet.send(id, response, Protocols.global.stargate)
 end
