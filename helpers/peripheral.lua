@@ -4,7 +4,7 @@ local function findOrWarn(type, filter)
     local foundName
     
     local p = peripheral.find(type, function(name, p) 
-        if not filter or filter(name, p) then
+        if filter(name, p) then
             foundName = name -- This is freaky but it works
             return true
         end
