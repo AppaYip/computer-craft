@@ -1,5 +1,6 @@
 local Phelper = require("peripheral")
 local Protocols = require("enums_protocols")
+local Handler = require("handler")
 
 local servername = "Stargate_main"
 
@@ -21,7 +22,14 @@ print("Listening on protocol: "..Protocols.global.stargate)
 while true do
     local id, packet = rednet.receive(Protocols.global.stargate)
 
-    local result = handler.handle(packet)
+    local ok, result = pcall(Handler.handle, packet)
+    if not ok then
+        rednet.send(id, {
+            success = false,
+            error = "Internal Server Error! Please contact Appa",
+            data = nil
+        })
+    end
 
     rednet.send(id, result)
 end
