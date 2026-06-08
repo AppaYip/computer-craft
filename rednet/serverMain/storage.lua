@@ -55,7 +55,11 @@ function add(gatePacket)
     })
 
     save(data)
-    return {success = true, err =  nil}
+    return {
+        success = true,
+        err =  nil,
+        data = nil,
+    }
 end
 
 
@@ -66,11 +70,15 @@ local function listNames()
     for _, gate in ipairs(data.stargates) do
         table.insert(list, {
             name = gate.name,
-            id= gate.serverId
+            id = gate.serverId
         })
     end
 
-    return {success = true, data = list}
+    return {
+        success = true,
+        err = nil,
+        data = list
+    }
 end
 
 
