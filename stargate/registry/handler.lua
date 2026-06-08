@@ -1,7 +1,7 @@
 local Actions = require("stargate/enums_actions")
 local Registry = require("stargate/registry/register")
 
-function handle(packet)
+local function handle(packet)
     if packet.action == Actions.registeryServer.register then
         return Registry.register(packet)
     elseif packet.action == Actions.registeryServer.list then
