@@ -13,7 +13,7 @@ end)
 if not modem then return end
 
 local gate = Phelper.findOrWarn("stargate", function (n,p)
-    return true
+    return type(p.stargateState) == "function"
 end)
 
 if not gate then return end
