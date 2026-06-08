@@ -4,6 +4,7 @@ local function loadDefault()
     return { stargates = {} }
 end
 
+
 function getAll()
     if not fs.exists(fileName) then
         return loadDefault()
@@ -21,14 +22,20 @@ function getAll()
     return  data
 end
 
+
 function save(data)
     local file = fs.open(fileName, "w")
     file.write(textutils.serializeJSON(data))
     file.close()
 end
 
+
 function add(gatePacket)
     local data = getAll()
+
+    if findByName(gatePacket.name) then
+        return false, "Stargate name already exists: " .. gatePacket.name
+    end
 
     table.insert(data.stargates, {
         name = gatePacket.name,
@@ -37,7 +44,9 @@ function add(gatePacket)
     })
 
     save(data)
+    return true, nil
 end
+
 
 local function listNames()
     local data = getAll()
@@ -52,6 +61,7 @@ local function listNames()
 
     return list
 end
+
 
 local function findByName(name)
     local data = getAll()
