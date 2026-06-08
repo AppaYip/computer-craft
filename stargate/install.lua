@@ -1,13 +1,16 @@
 local base = "https://raw.githubusercontent.com/AppaYip/computer-craft/main/"
 
 local files = {
-    "rednet/enums_actions.lua",
-    "rednet/enums_protocols.lua",
-    "rednet/registry/handler.lua",
-    "rednet/registry/register.lua",
-    "rednet/registry/server.lua",
-    "rednet/registry/storage.lua",
-    "rednet/registry/uninstall.lua",
+    "stargate/install.lua",
+    "stargate/uninstall.lua",
+    
+    "stargate/enums_actions.lua",
+    "stargate/enums_protocols.lua",
+
+    "stargate/registry/handler.lua",
+    "stargate/registry/register.lua",
+    "stargate/registry/server.lua",
+    "stargate/registry/storage.lua",
 
     "helpers/peripheral.lua",
 }
