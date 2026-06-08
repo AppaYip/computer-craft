@@ -7,8 +7,9 @@ local files = {
     "rednet/registery/register.lua",
     "rednet/registery/server.lua",
     "rednet/registery/storage.lua",
+    "rednet/helpers/uninstall.lua",
 
-    "helpers/peripheral.lua"
+    "helpers/peripheral.lua",
 }
 
 print("Downloading files!")
