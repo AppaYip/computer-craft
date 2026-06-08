@@ -1,12 +1,12 @@
-local base = "https://raw.githubusercontent.com/AppaYip/computer-craft/main/rednet/"
+local base = "https://raw.githubusercontent.com/AppaYip/computer-craft/main/"
 
 local files = {
-    "enums_actions.lua",
-    "enums_protocols.lua",
-    "registery/handler.lua",
-    "registery/register.lua",
-    "registery/server.lua",
-    "registery/storage.lua",
+    "rednet/enums_actions.lua",
+    "rednet/enums_protocols.lua",
+    "rednet/registery/handler.lua",
+    "rednet/registery/register.lua",
+    "rednet/registery/server.lua",
+    "rednet/registery/storage.lua",
 
     "helpers/peripheral.lua"
 }
