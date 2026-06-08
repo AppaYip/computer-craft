@@ -45,7 +45,11 @@ function add(gatePacket)
     local data = getAll()
 
     if findByName(gatePacket.name) then
-        return false, "Stargate name already exists: " .. gatePacket.name
+        return {
+            success = false, 
+            error = "Stargate name already exists: " .. gatePacket.name,
+            data = nil
+        }
     end
 
     table.insert(data.stargates, {
