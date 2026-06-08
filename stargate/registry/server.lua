@@ -33,8 +33,8 @@ while true do
             success = false,
             error = "Internal Server Error! Please contact Appa",
             data = nil
-        })
+        }, Protocols.global.stargate)
+    else
+        rednet.send(id, result, Protocols.global.stargate)
     end
-
-    rednet.send(id, result)
 end
