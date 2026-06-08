@@ -1,5 +1,5 @@
 local Actions = require("stargate/enums_actions")
-local Controller = require("stargate/server/gateController")
+local Controller = require("stargate/server/gateLogic")
 
 local function success(data)
     return {
