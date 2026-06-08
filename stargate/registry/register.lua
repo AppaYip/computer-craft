@@ -1,4 +1,4 @@
-local Storage = require("stargate/registery/storage")
+local Storage = require("stargate/registry/storage")
 
 local function register(packet)
     if type(packet.name) ~= "string"
