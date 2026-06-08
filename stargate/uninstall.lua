@@ -1,13 +1,12 @@
 local dirs = {
-    "rednet/registery",
-    "rednet",
+    "stargate/",
     "helpers"
 }
 
 print("Removing files!")
 
 for _, dir in ipairs(dirs) do
-    if fs.exists(dir) and #fs.list(dir) == 0 then
+    if fs.exists(dir) then
         fs.delete(dir)
         print("Removed empty directory: " .. dir)
     end
