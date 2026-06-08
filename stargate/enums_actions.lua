@@ -1,6 +1,21 @@
-local serverMain = {
+local registeryServer = {
     register = "register",
     list = "list"
 }
 
-return {serverMain = serverMain}
+local gateServer = {
+    ping = "ping",
+    dial = "dial",
+    disconnect = "disconnect",
+    status = "status"
+}
+
+local client = {
+
+}
+
+return {
+    registeryServer = registeryServer,
+    gateServer = gateServer,
+    client = client
+}
