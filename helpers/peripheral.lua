@@ -12,7 +12,7 @@ local function findOrWarn(type, filter)
 
     if not p then
         printError("Could not find peripheral of type: " .. type)
-        return nill
+        return nil
     end
 
     return {
