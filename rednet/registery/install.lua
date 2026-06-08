@@ -6,7 +6,9 @@ local files = {
     "registery/handler.lua",
     "registery/register.lua",
     "registery/server.lua",
-    "registery/storage.lua"
+    "registery/storage.lua",
+
+    "helpers/peripheral.lua"
 }
 
 print("Downloading files!")
