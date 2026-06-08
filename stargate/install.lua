@@ -12,6 +12,7 @@ local files = {
     "stargate/registry/server.lua",
     "stargate/registry/storage.lua",
 
+    "helpers/require.lua",
     "helpers/peripheral.lua",
 }
 
