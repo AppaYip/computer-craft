@@ -32,5 +32,7 @@ while true do
     print("Recieved packet from: " .. id)
     print("Packet: " .. table.serialise(packet))
 
-    return PacketHandler.handle(packet, gate)
+    local response = PacketHandler.handle(packet, gate)
+
+    rednet.send(id, response, Protocols.global.stargate)
 end
