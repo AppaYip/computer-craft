@@ -1,4 +1,4 @@
-local registeryServer = {
+local registryServer = {
     register = "register",
     list = "list"
 }
@@ -15,7 +15,7 @@ local client = {
 }
 
 return {
-    registeryServer = registeryServer,
+    registryServer = registryServer,
     gateServer = gateServer,
     client = client
 }

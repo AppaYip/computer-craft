@@ -38,6 +38,7 @@ local function setup(gate)
     print("Please enter your name: ")
     config.author = read()
 
+    config.address = gate.address
     config.computerId = os.getComputerID()
 
     save(config)
