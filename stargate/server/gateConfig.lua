@@ -53,7 +53,7 @@ local function loadOrSetup(gate)
         return setup(gate)
     end
     
-    return setup(gate)
+    return config
 end
 
 return {
