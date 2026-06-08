@@ -31,6 +31,10 @@ end
 
 
 local function dial(packet, gate)
+    if type(packet.address) ~= "string" then
+        return failure("Malformed Packet. Missing address.")
+    end
+
     local ok, error = Controller.dial(
         gate,
         packet.address
