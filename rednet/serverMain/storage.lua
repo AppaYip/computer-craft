@@ -57,7 +57,7 @@ function add(gatePacket)
     save(data)
     return {
         success = true,
-        err =  nil,
+        error =  nil,
         data = nil,
     }
 end
@@ -76,7 +76,7 @@ local function listNames()
 
     return {
         success = true,
-        err = nil,
+        error = nil,
         data = list
     }
 end
