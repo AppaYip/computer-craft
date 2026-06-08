@@ -22,8 +22,8 @@ function getAll()
     return data
 end
 
-local function findByName(name)
-    local data = getAll()
+
+local function findByName(name, data)
     for _, gate in ipairs(data.stargates) do
         if gate.name == name then
             return gate
@@ -44,7 +44,7 @@ end
 function add(gatePacket)
     local data = getAll()
 
-    if findByName(gatePacket.name) then
+    if findByName(gatePacket.name, data) then
         return {
             success = false, 
             error = "Stargate name already exists: " .. gatePacket.name,
