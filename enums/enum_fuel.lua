@@ -9,4 +9,3 @@ local cost = {
 }
 
 return {fuels = fuels, cost = cost}
-
