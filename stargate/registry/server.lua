@@ -1,4 +1,4 @@
-dofile("bootstrap.lua")
+dofile("helpers/require.lua")
 
 local Phelper = require("helpers/peripheral")
 local Protocols = require("stargate/enums_protocols")
