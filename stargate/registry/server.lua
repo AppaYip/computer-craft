@@ -24,6 +24,8 @@ print("Listening on protocol: "..Protocols.global.stargate)
 while true do
     local id, packet = rednet.receive(Protocols.global.stargate)
 
+    print("Recieved packet from ".. tostring(id) .. " Packet:"..table.unpack(packet))
+
     local ok, result = pcall(Handler.handle, packet)
     if not ok then
         rednet.send(id, {
