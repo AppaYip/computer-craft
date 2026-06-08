@@ -38,7 +38,7 @@ local function setup(gate)
     print("Please enter your name: ")
     config.author = read()
 
-    config.address = gate.address
+    config.address = gate.localAddress()
     config.computerId = os.getComputerID()
 
     save(config)
@@ -49,9 +49,8 @@ end
 
 local function loadOrSetup(gate)
     local config = load()
-
-    if config then
-        return config
+    if type(config) ~= "table" then
+        return setup(gate)
     end
     
     return setup(gate)
