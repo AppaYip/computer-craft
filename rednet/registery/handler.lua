@@ -10,7 +10,7 @@ function handle(packet)
 
     return {
         success = false,
-        error = "Unknown action"..tostring(packet.action)
+        error = "Unknown action: "..tostring(packet.action)
     }
 end
 
