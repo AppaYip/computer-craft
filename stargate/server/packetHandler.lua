@@ -9,6 +9,7 @@ local function success(data)
     }
 end
 
+
 local function failure(error)
     return {
         success = false,
@@ -17,18 +18,17 @@ local function failure(error)
     }
 end
 
+
 local function ping(packet, gate)
     return success(nil)
 end
 
+
 local function status(packet, gate)
-    return success({
-        state = gate.stargateState(),
-        iris = gate.irisState(),
-        energy = gate.energyAvailable(),
-        address = gate.remoteAddress()
-    })
+    local info = Controller.getStatus(gate)
+    return success(info)
 end
+
 
 local function dial(packet, gate)
     local ok, error = Controller.dial(
@@ -42,6 +42,12 @@ local function dial(packet, gate)
 
     return success(nil)
 end
+
+local function disconnect(packet, gate)
+    Controller.disconnect(gate)
+    return success(nil)
+end
+
 
 local handlers = {
     [Actions.gateServer.ping] = ping,
