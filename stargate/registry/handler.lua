@@ -1,5 +1,5 @@
-local Actions = require("enums_actions")
-local Registery = require("register")
+local Actions = require("stargate/enums_actions")
+local Registery = require("stargate/registry/register")
 
 function handle(packet)
     if packet.action == Actions.serverMain.register then

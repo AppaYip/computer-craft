@@ -1,6 +1,8 @@
-local Phelper = require("peripheral")
-local Protocols = require("enums_protocols")
-local Handler = require("handler")
+dofile("bootstrap.lua")
+
+local Phelper = require("helpers/peripheral")
+local Protocols = require("stargate/enums_protocols")
+local Handler = require("stargate/registry/handler")
 
 local servername = "Stargate_main"
 
