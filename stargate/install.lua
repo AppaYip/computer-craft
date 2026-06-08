@@ -3,7 +3,7 @@ local base = "https://raw.githubusercontent.com/AppaYip/computer-craft/main/"
 local files = {
     "stargate/install.lua",
     "stargate/uninstall.lua",
-    
+
     "stargate/enums_actions.lua",
     "stargate/enums_protocols.lua",
 
@@ -24,7 +24,7 @@ for _, file in ipairs(files) do
     local result = shell.run("wget", url, file)
 
     if not result then
-        print("Failed to install file: "..file)
+        printError("Failed to install file: "..file)
     end
 end
 print("Install completed.")
