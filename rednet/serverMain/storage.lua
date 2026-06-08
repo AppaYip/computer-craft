@@ -19,7 +19,18 @@ function getAll()
         return loadDefault()
     end
 
-    return  data
+    return data
+end
+
+local function findByName(name)
+    local data = getAll()
+    for _, gate in ipairs(data.stargates) do
+        if gate.name == name then
+            return gate
+        end
+    end
+
+    return nil
 end
 
 
@@ -44,7 +55,7 @@ function add(gatePacket)
     })
 
     save(data)
-    return true, nil
+    return {success = true, err =  nil}
 end
 
 
@@ -59,20 +70,7 @@ local function listNames()
         })
     end
 
-    return list
-end
-
-
-local function findByName(name)
-    local data = getAll()
-
-    for _, gate in ipairs(data.stargates) do
-        if gate.name == name then
-            return gate
-        end
-    end
-
-    return nil
+    return {success = true, data = list}
 end
 
 
