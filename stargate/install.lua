@@ -24,7 +24,7 @@ for _, file in ipairs(files) do
     local result = shell.run("wget", url, file)
 
     if not result then
-        printError("Failed to install file: "..file)
+        printError("Failed to install file: " .. file)
     end
 end
 print("Install completed.")
