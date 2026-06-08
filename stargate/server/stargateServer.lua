@@ -18,7 +18,7 @@ end)
 
 if not gate then return end
 
-local config = GateConfig.loadOrSetup(gate)
+local config = GateConfig.loadOrSetup(gate.peripheral)
 
 print("Loaded gate: ")
 print(config.gateName)
