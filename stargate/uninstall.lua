@@ -8,7 +8,7 @@ print("Removing files!")
 for _, dir in ipairs(dirs) do
     if fs.exists(dir) then
         fs.delete(dir)
-        print("Removed empty directory: " .. dir)
+        print("Removed directory: " .. dir)
     end
 end
 print("Uninstall completed.")
