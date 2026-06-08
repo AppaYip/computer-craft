@@ -12,6 +12,6 @@ if not modem then return end
 rednet.open(modem.name)
 
 
-while True do
+while true do
 
 end
