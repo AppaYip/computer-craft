@@ -21,7 +21,7 @@ local function inventory_action(range, func, ...)
                 range.increment or 1 do    
 
             turtle.select(i)
-            local reuslt = func(i, table.unpack(args)) 
+            local result = func(i, table.unpack(args)) 
 
             if result ~= nil then
                 return result
