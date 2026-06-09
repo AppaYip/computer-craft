@@ -12,7 +12,7 @@ end)
 
 if not modem then return end
 
-local gate = Phelper.findOrWarn("stargate", function (n,p)
+local gate = Phelper.findOrWarn("stargate", function(n, p)
     return type(p.stargateState) == "function"
 end)
 
@@ -35,7 +35,7 @@ while true do
     local ok, response = pcall(
         PacketHandler.handle,
         packet,
-        gate
+        gate.peripheral
     )
     if not ok then
         response = {
