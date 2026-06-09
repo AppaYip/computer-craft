@@ -49,7 +49,10 @@ end
 
 local function loadOrSetup(gate)
     local config = load()
-    if type(config) ~= "table" then
+
+    if type(config) ~= "table"
+        or config.address == nil
+        or config.address == "" then
         return setup(gate)
     end
     
